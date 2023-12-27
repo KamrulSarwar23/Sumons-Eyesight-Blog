@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Backend\ArticleController;
+use App\Http\Controllers\backend\DashboardController;
 use App\Http\Controllers\Backend\HeroSectionController;
 use App\Http\Controllers\Backend\ImageController;
 use App\Http\Controllers\Backend\ProfileController;
@@ -11,11 +12,10 @@ use Illuminate\Support\Facades\Route;
 
 require __DIR__ . '/auth.php';
 
-Route::get('/dashboard', function () {
-    return view('backend.dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+Route::middleware(['auth', 'verified'])->group(function () {
 
-Route::middleware('auth')->group(function () {
+    // dashboard controller
+    Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
 
     Route::get('admin/profile/view', [UpdatePassword::class, 'index'])->name('admin.profile.view');
     Route::post('admin/profile/update', [UpdatePassword::class, 'updateProfile'])->name('admin.profile.update');
@@ -50,6 +50,7 @@ Route::middleware('auth')->group(function () {
     // Hero Section Route
     Route::get('/hero/index', [HeroSectionController::class, 'index'])->name('hero.index');
     Route::put('/hero/update', [HeroSectionController::class, 'update'])->name('hero.update');
+
 });
 
 // Home Page Routes

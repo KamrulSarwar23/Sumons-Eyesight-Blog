@@ -14,10 +14,10 @@
                     </div>
                     <div class="card-wrap">
                         <div class="card-header ">
-                            <h4>Messages</h4>
+                            <h4>Videos</h4>
                         </div>
                         <div class="card-body text-info">
-                            {{-- {{ $countCategory }} --}}
+                                {{ $videos }}
                         </div>
                     </div>
                 </div>
@@ -30,10 +30,10 @@
                     </div>
                     <div class="card-wrap">
                         <div class="card-header">
-                            <h4>Reviews</h4>
+                            <h4>Articles</h4>
                         </div>
                         <div class="card-body text-info">
-                            {{-- {{ $countSubCategory }} --}}
+                            {{ $article }}
                         </div>
                     </div>
                 </div>
@@ -47,10 +47,10 @@
                     </div>
                     <div class="card-wrap">
                         <div class="card-header">
-                            <h4>Videos</h4>
+                            <h4>Images</h4>
                         </div>
                         <div class="card-body text-info">
-                            {{-- {{$countMessage}} --}}
+                           {{ $images }}
                         </div>
                     </div>
                 </div>
@@ -58,7 +58,7 @@
 
             <div class="col-lg-3 col-md-6 col-sm-6 col-12">
                 <div class="card card-statistic-1">
-                    <div class="card-icon bg-primary">
+                    <div class="card-icon bg-secondary">
                         <i class="far fa-file"></i>
                     </div>
                     <div class="card-wrap">
@@ -66,23 +66,7 @@
                             <h4>Images</h4>
                         </div>
                         <div class="card-body text-info">
-                            {{-- {{$countTag}} --}}
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-3 col-md-6 col-sm-6 col-12">
-                <div class="card card-statistic-1">
-                    <div class="card-icon bg-danger">
-                        <i class="far fa-newspaper"></i>
-                    </div>
-                    <div class="card-wrap">
-                        <div class="card-header">
-                            <h4>Article</h4>
-                        </div>
-                        <div class="card-body text-info">
-                            {{-- {{ $countProduct }} --}}
+                          
                         </div>
                     </div>
                 </div>

@@ -20,13 +20,16 @@ class UpdatePassword extends Controller
             'email' => ['required', 'email', 'unique:users,email,' . Auth::user()->id],
             'image' => ['nullable', 'max:5000'],
         ]);
+       
         $user = Auth::user();
+        $imageName = $user->image;
+
         if ($request->hasFile('image')) {
             $image = $request->file('image');
             $imageName = time() . "." . $image->getClientOriginalExtension();
             $image->storeAs('public/profile', $imageName);
         }
-
+        
         $user->image =$imageName;
         $user->name = $request->name;
         $user->email = $request->email;
