@@ -21,12 +21,12 @@
 
     </form>
     <ul class="navbar-nav navbar-right">
-        <li class="dropdown dropdown-list-toggle"><a href="#" data-toggle="dropdown"
+        {{-- <li class="dropdown dropdown-list-toggle"><a href="#" data-toggle="dropdown"
                 class="nav-link nav-link-lg message-toggle beep"><i class="far fa-envelope"></i></a>
             <div class="dropdown-menu dropdown-list dropdown-menu-right">
                 <div class="dropdown-header">Messages</div>
 
-                {{-- <div class="dropdown-list-content dropdown-list-message">
+                <div class="dropdown-list-content dropdown-list-message">
 
                     @foreach ($messages as $message)
                         <a href="{{ route('message.view') }}" class="dropdown-item dropdown-item-unread">
@@ -45,14 +45,14 @@
                         </a>
                     @endforeach
 
-                </div> --}}
+                </div>
 
 
-                {{-- <div class="dropdown-footer text-center">
+                <div class="dropdown-footer text-center">
                     <a href="#">View All <i class="fas fa-chevron-right"></i></a>
-                </div> --}}
+                </div>
             </div>
-        </li>
+        </li> --}}
 
         {{-- <li class="dropdown dropdown-list-toggle"><a href="#" data-toggle="dropdown"
                 class="nav-link notification-toggle nav-link-lg beep"><i class="far fa-bell"></i></a>
@@ -117,34 +117,36 @@
 
         <li class="dropdown"><a href="#" data-toggle="dropdown"
                 class="nav-link dropdown-toggle nav-link-lg nav-link-user">
-                <img width="120px" height="150px" style="border-radius: 10px" src="{{ asset('images/profile/' . Auth::user()->image) }}" alt="">
-                     <div class="d-sm-none d-lg-inline-block">{{ Auth::user()->username }}</div>  </a>
-                <div class="dropdown-menu dropdown-menu-right">
-                    <div class="dropdown-title"></div>
-                    <a href="" class="dropdown-item has-icon">
-                        <i class="far fa-user"></i> Profile
-                    </a>
+                <img width="120px" height="150px" style="border-radius: 10px"
+                    src="{{ asset('storage/profile/' . Auth::user()->image) }}" alt="">
+                <div class="d-sm-none d-lg-inline-block">{{ Auth::user()->username }}</div>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right">
+                <div class="dropdown-title"></div>
+                <a href="{{ route('admin.profile.view') }}" class="dropdown-item has-icon">
+                    <i class="far fa-user"></i> Profile
+                </a>
 
-                    {{-- <a href="features-activities.html" class="dropdown-item has-icon">
+                {{-- <a href="features-activities.html" class="dropdown-item has-icon">
                     <i class="fas fa-bolt"></i> Activities
                 </a>
                 <a href="features-settings.html" class="dropdown-item has-icon">
                     <i class="fas fa-cog"></i> Settings
                 </a> --}}
 
-                    <div class="dropdown-divider"></div>
+                <div class="dropdown-divider"></div>
 
-                    <form method="POST" action="{{ route('logout') }}">
-                        @csrf
-                        <a href="{{ route('logout') }}"
-                            onclick="event.preventDefault();
+                <form method="POST" action="{{ route('logout') }}">
+                    @csrf
+                    <a href="{{ route('logout') }}"
+                        onclick="event.preventDefault();
             this.closest('form').submit()"
-                            class="dropdown-item has-icon text-danger">
-                            <i class="fas fa-sign-out-alt"></i> Logout
-                        </a>
-                    </form>
+                        class="dropdown-item has-icon text-danger">
+                        <i class="fas fa-sign-out-alt"></i> Logout
+                    </a>
+                </form>
 
-                </div>
+            </div>
 
 
         </li>

@@ -31,7 +31,7 @@
                                     <tr>
                                         <td>{{ $item->id }}</td>
                                         <td>{{ $item->title }}</td>
-                                        <td>{{ $item->description }}</td>
+                                        <td>{!! limitText($item->description, 300) !!}</td>
 
                                         @if ($item->status == 1)
                                             <td><span class="badge badge-success">Active</span></td>
@@ -58,7 +58,7 @@
 
                             </table>
 
-                            {{-- {{ $categories->links() }} --}}
+                          {{ $article->links() }}
 
                         </div>
                     </div>

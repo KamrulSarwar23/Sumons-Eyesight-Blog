@@ -10,7 +10,7 @@ class ArticleController extends Controller
 {
     public function index()
     {
-        $article =  Article::orderBy('id', 'DESC')->get();
+        $article =  Article::orderBy('id', 'DESC')->paginate(10);
         return view('backend.article.index', compact('article'));
     }
 
@@ -22,7 +22,7 @@ class ArticleController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'title' => ['required'],
+            'title' => ['nullable'],
             'description' => ['required'],
             'status' => ['required'],
         ]);

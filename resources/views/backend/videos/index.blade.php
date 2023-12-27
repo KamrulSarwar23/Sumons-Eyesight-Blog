@@ -33,7 +33,7 @@
                                         <td>{{ $video->title }}</td>
                                         <td>
                                             <div class="box">
-                                                <iframe width="80%" height="250px" src="{{ $video->url }}"
+                                                <iframe width="70%" height="200px" src="{{ $video->url }}"
                                                     title="YouTube video player" frameborder="0"
                                                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                                                     allowfullscreen></iframe>
@@ -65,7 +65,7 @@
 
                             </table>
 
-                            {{-- {{ $categories->links() }} --}}
+                            {{ $videos->links() }}
 
                         </div>
                     </div>

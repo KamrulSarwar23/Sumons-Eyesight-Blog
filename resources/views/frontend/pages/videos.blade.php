@@ -14,13 +14,10 @@
 <body>
 
     <section id="portfolio">
-
         <div class="our-work">
+            <a class="btn btn-sm btn-primary mb-3" href="{{ route('home.page.view') }}">Back</a>
+            
             <div class="container">
-
-                <div class="back-home">
-                    <a href="{{ route('home.page.view') }}"> <button class="btn">Back Home</button> </a>
-                </div>
 
                 <h2> Our <span>Youtube</span> Blog</h2>
                 <p>A YouTube blog, often referred to as a vlog or video blog, is a form of content creation where
@@ -29,22 +26,20 @@
                     audibly, bringing their ideas and personalities to life.</p>
 
                 <div class="work-box">
-
                     @foreach ($videos as $item)
-                        
-                    <div class="box">
-                        <iframe width="100%" height="300px" src="{{ $item->url }}"
-                            title="YouTube video player" frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                            allowfullscreen></iframe>
-                    </div>
+                        <div class="box">
+                            <iframe width="100%" height="300px" src="{{ $item->url }}" title="YouTube video player"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                allowfullscreen></iframe>
+                        </div>
                     @endforeach
-
                 </div>
+
+                {{ $videos->links() }}
             </div>
         </div>
     </section>
-
 
 </body>
 
