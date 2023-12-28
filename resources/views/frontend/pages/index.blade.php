@@ -22,6 +22,20 @@
         .card-wrapper a {
             text-decoration: none;
         }
+
+        .login-btn{
+            background: rgb(58, 182, 199);
+            padding: 5px 15px;
+            border-radius: 10px;
+            border: none;
+            color: white;
+            font-size: 14px;
+        }
+
+        .login-btn:hover{
+            background: rgb(111, 195, 206);
+        }
+
     </style>
 </head>
 
@@ -80,8 +94,8 @@
                                 </ul>
 
 
-                                <a href="https://www.youtube.com/@sumonseyesight6986" target="-blank"><button
-                                        class="btn btn-sm">Follow Us</button></a>
+                                <a href="{{ route('login') }}" target="-blank"><button
+                                        class="login-btn">Login</button></a>
 
                             </div>
                         </div>
@@ -112,7 +126,7 @@
         <section id="about">
             <div class="container">
                 <div class="about">
-                    <div class="left">
+                    <div class="left mb-3">
                         <div class="about-img">
                             <img src=" {{ asset('storage/profile/' . $profile->image) }}" alt="">
 
@@ -163,7 +177,7 @@
                                 <div class="card">
                                     <h2>{{ $item->title }}</h2>
                                     <p> {!! limitText($item->description, 200) !!} <a href="{{ route('article.all', $item->id) }}"><small
-                                                class="text-danger">See
+                                                class="text-info">See
                                                 More...</small></a></p>
                                 </div>
                         

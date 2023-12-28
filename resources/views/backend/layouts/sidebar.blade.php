@@ -1,4 +1,3 @@
-
 <div class="main-sidebar sidebar-style-2">
     <aside id="sidebar-wrapper">
         <div class="sidebar-brand">
@@ -10,7 +9,8 @@
         <ul class="sidebar-menu">
             <li class="menu-header">Dashboard</li>
             <li class="dropdown active">
-                <a href="{{ route('dashboard') }}" class="nav-link"><i
+                <a href="{{ route('dashboard') }}"
+                    class="{{ request()->routeIs('dashboard') ? 'text-info' : '' }} nav-link"><i
                         class="text-danger fas fa-fire"></i><span>Dashboard</span></a>
 
             </li>
@@ -18,7 +18,8 @@
 
             <li class="dropdown">
                 <a href="{{ route('profile.index') }}"
-                    class="{{ request()->routeIs('profile.index') ? 'text-info' : '' }} nav-link"><i class="fa-solid fa-user"></i>
+                    class="{{ request()->routeIs('profile.index') ? 'text-info' : '' }} nav-link"><i
+                        class="fa-solid fa-user"></i>
                     <span>Manage About Me</span></a>
             </li>
 
