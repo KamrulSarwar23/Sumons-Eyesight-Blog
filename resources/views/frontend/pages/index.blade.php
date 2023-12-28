@@ -48,7 +48,8 @@
                             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                                 <ul class="navbar-nav m-auto mb-2 mb-lg-0">
                                     <li class="nav-item">
-                                        <a class="nav-link" aria-current="page" href="#home">Home</a>
+                                        <a class="nav-link" aria-current="page"
+                                            href="{{ route('home.page.view') }}">Home</a>
                                     </li>
 
                                     <li class="nav-item">
@@ -72,14 +73,15 @@
                                     </li>
 
                                     <li class="nav-item">
-                                        <a class="nav-link" aria-current="page" href="#contact">Contact Us</a>
+                                        <a class="nav-link" aria-current="page"
+                                            href="https://www.facebook.com/SumonEyesight" target="-blank">Contact Us</a>
                                     </li>
 
                                 </ul>
 
 
                                 <a href="https://www.youtube.com/@sumonseyesight6986" target="-blank"><button
-                                        class="btn">Subscribe</button></a>
+                                        class="btn btn-sm">Follow Us</button></a>
 
                             </div>
                         </div>
@@ -95,7 +97,8 @@
 
                             <p>{!! $herodata->description !!}</p>
 
-                            <a href="#contact"><button class="btn">Contact Us</button></a>
+                            <a href="https://www.facebook.com/SumonEyesight" target="-blank"><button
+                                    class="btn">Contact Us</button></a>
                         </div>
                     </div>
                 </div>
@@ -116,7 +119,8 @@
                             <div class="img-text">
                                 <h5>Sumon's Eyesight</h5>
 
-                                <a href="#contact"><button class="btn btn-sm">Contact</button></a>
+                                <a href="https://www.facebook.com/SumonEyesight" target="-blank"><button
+                                        class="btn btn-sm">Contact</button></a>
                             </div>
                         </div>
 
@@ -128,11 +132,11 @@
                         <p> {!! $profile->description !!} </p>
 
                         <div class="social">
-                            <a href="https://www.facebook.com/sumonHcl.ctg" target="-blank"><i
+                            <a href="https://www.facebook.com/SumonEyesight" target="-blank"><i
                                     class="fab fa-facebook-f"></i></a>
                             <a href="https://www.youtube.com/@sumonseyesight6986" target="-blank"><i
                                     class="fab fa-youtube"></i></a>
-                            <i class="fab fa-twitter"></i>
+
 
                         </div>
                     </div>
@@ -151,18 +155,23 @@
                         <p>Lorem ipsum dolor sit amet consectetur adiisicing elit Sit omnis</p>
                     </div>
 
+
                     <div class="card-wrapper">
-                        @foreach ($article as $item)
-                            <div class="card">
-                                <h2>{{ $item->title }}</h2>
-                                <p> {!! limitText($item->description, 200) !!} <a href="{{ route('article.all', $item->id) }}"><small
-                                            class="text-danger">See
-                                            More...</small></a></p>
-                            </div>
-                        @endforeach
-
-
+                       
+                            @foreach ($article as $item)
+                           
+                                <div class="card">
+                                    <h2>{{ $item->title }}</h2>
+                                    <p> {!! limitText($item->description, 200) !!} <a href="{{ route('article.all', $item->id) }}"><small
+                                                class="text-danger">See
+                                                More...</small></a></p>
+                                </div>
+                        
+                            @endforeach
+                        
                     </div>
+
+
                     <div class="more-btn text-center mb-3">
                         <a href="{{ route('article.view') }}"> <button class="btn">See More Article</button> </a>
                     </div>
@@ -267,11 +276,11 @@
 
                     <div class="social">
 
-                        <a href="https://www.facebook.com/sumonHcl.ctg" target="-blank"><i
+                        <a href="https://www.facebook.com/SumonEyesight" target="-blank"><i
                                 class="fab fa-facebook-f"></i></a>
                         <a href="https://www.youtube.com/@sumonseyesight6986" target="-blank"><i
                                 class="fab fa-youtube"></i></a>
-                        <i class="fab fa-twitter"></i>
+
 
 
                     </div>

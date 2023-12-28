@@ -729,6 +729,11 @@ header nav .left a:hover {
         /* clip-path: polygon(0 0, 100% 0, 100% 100%, 25% 90%, 0 100%); */
     }
 
+    .full-img img {
+        max-width: 500px;
+        height: 80vh;
+    }
+
 }
 
 
@@ -796,5 +801,10 @@ header nav .left a:hover {
 
     .contact-wrapper .contact-card .fas {
         margin-bottom: 10px;
+    }
+
+    .full-img img {
+        max-width: 400px;
+        height: 80vh;
     }
 }
